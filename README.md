@@ -11,7 +11,7 @@ Fonctionnalités
     Interface intuitive et design minimaliste.
 
 Installation
-Étape 1 : Télécharger le code source
+Étape 1 : Télécharger le code .zip sur git
 
     Clonez ou téléchargez ce projet sous forme de fichier ZIP à partir de son dépôt GitHub ou d’une autre source.
     Extrayez le contenu du fichier ZIP dans un dossier de votre choix.
@@ -19,13 +19,13 @@ Installation
 Étape 2 : Activer le mode développeur dans Firefox
 
     Ouvrez Firefox.
-    Tapez about:debugging#/runtime/this-firefox dans la barre d’adresse et appuyez sur Entrée.
-    Cliquez sur Charger un module complémentaire temporaire.
+    Tapez ***about:debugging#/runtime/this-firefox*** dans la barre d’adresse et appuyez sur Entrée.
+    Cliquez sur "Charger un module complémentaire temporaire" ou Load "Tempory Add-on...".
 
 Étape 3 : Charger l’extension
 
     Dans la fenêtre de sélection de fichier, naviguez jusqu’au dossier où vous avez extrait le projet.
-    Sélectionnez le fichier manifest.json.
+    Sélectionnez le fichier ***manifest.json***.
     L’extension sera maintenant activée temporairement dans Firefox.
 
 Utilisation
