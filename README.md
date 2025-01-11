@@ -4,6 +4,7 @@ Si vous avez des proposition de mise à jour, n'hésitez pas à me contacté sur
 
 # Update du 11/01/2025
 Amélioration graphique général de l'addon pour mieux s'accorder au site.
+
 (Une nouvelle update est prévue le 12/01/2025 pour avoir une pop-up avec la liste des pseudo/pseudo modifier pour mieux s'y retrouvé).
 
 # Description
