@@ -1,6 +1,9 @@
 # HiddenNickname
-Replace Nicknames - README en Français
-Description
+
+# Update du 11/012025
+Amélioration graphique général de l'addon pour mieux s'accorder au site.
+
+# Description
 
 Replace Nicknames est une extension Firefox qui remplace les surnoms des utilisateurs sur les sites chatiw.com et chatiw.fr par des mots aléatoires. Elle permet également de basculer entre le surnom original et le surnom généré aléatoirement grâce à un bouton dédié.
 
