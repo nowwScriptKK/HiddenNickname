@@ -32,7 +32,6 @@ function processNicknameElement(bNode, isIdNickname = false) {
   const toggleButton = document.createElement("button");
   toggleButton.textContent = "Toggle";
   toggleButton.classList.add("toggle-nickname-button");
-  toggleButton.style.marginLeft = "5px";
   toggleButton.setAttribute("aria-label", `Toggle nickname for ${originalNickname}`);
   toggleButton.setAttribute("title", `Toggle nickname for ${originalNickname}`);
 
@@ -97,17 +96,23 @@ function injectStyles() {
   const style = document.createElement('style');
   style.textContent = `
     .toggle-nickname-button {
-      background-color: #007bff;
+      background-color: #4CAF50; /* Correspond aux couleurs du site */
       color: #fff;
-      border: none;
-      padding: 2px 5px;
-      border-radius: 3px;
+      border: 1px solid #3e8e41;
+      padding: 4px 8px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 12px;
-      margin-left: 5px; /* Ajout de l'espacement */
+      font-size: 14px;
+      margin-left: 8px;
     }
     .toggle-nickname-button:hover {
-      background-color: #0056b3;
+      background-color: #45a049;
+    }
+    
+    /* Alignement amélioré pour les boutons */
+    span[data-processed="true"] {
+      display: inline-flex;
+      align-items: center;
     }
   `;
   document.head.appendChild(style);
