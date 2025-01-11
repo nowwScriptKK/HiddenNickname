@@ -7,7 +7,7 @@ Amélioration graphique général de l'addon pour mieux s'accorder au site.
 
 Ajout d'un pop-up pour affiché la liste des pseudo.
 
-Ajout de la possibilié de cherché un pseudo dinamiquement dans la pop-up de liste de pseudo.
+Ajout de la possibilié de cherché un pseudo dynamiquement dans la pop-up de liste de pseudo.
 # Description
 
 Replace Nicknames est une extension Firefox qui remplace les surnoms des utilisateurs sur les sites chatiw.com et chatiw.fr par des mots aléatoires. Elle permet également de basculer entre le surnom original et le surnom généré aléatoirement grâce à un bouton dédié.
