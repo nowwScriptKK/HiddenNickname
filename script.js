@@ -86,6 +86,87 @@ function observeChatTextDiv() {
   observer.observe(chatDiv, { childList: true, subtree: true });
 }
 
+function createPopupWindow() {
+  const popup = document.createElement("div");
+  popup.classList.add("nickname-popup");
+
+  const popupHeader = document.createElement("div");
+  popupHeader.classList.add("popup-header");
+  popupHeader.textContent = "Nickname Mapping";
+
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "✖";
+  closeButton.classList.add("popup-close-button");
+  closeButton.addEventListener("click", () => {
+    popup.remove();
+  });
+
+  popupHeader.appendChild(closeButton);
+  popup.appendChild(popupHeader);
+
+  const popupContent = document.createElement("div");
+  popupContent.classList.add("popup-content");
+
+  const searchBox = document.createElement("input");
+  searchBox.type = "text";
+  searchBox.placeholder = "Search nicknames...";
+  searchBox.classList.add("search-box");
+  searchBox.addEventListener("input", (event) => {
+    const query = event.target.value.toLowerCase();
+    const listItems = popupContent.querySelectorAll("li");
+    listItems.forEach((item) => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? "list-item" : "none";
+    });
+  });
+
+  popupContent.appendChild(searchBox);
+
+  const list = document.createElement("ul");
+  nicknameMap.forEach((generated, original) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${original} → ${generated}`;
+    list.appendChild(listItem);
+  });
+  popupContent.appendChild(list);
+  popup.appendChild(popupContent);
+
+  document.body.appendChild(popup);
+
+  // Make the popup draggable
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  popupHeader.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - popup.getBoundingClientRect().left;
+    offsetY = e.clientY - popup.getBoundingClientRect().top;
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      popup.style.left = `${e.clientX - offsetX}px`;
+      popup.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+}
+
+function addTopLeftButton() {
+  const button = document.createElement("button");
+  button.textContent = "Show Nicknames";
+  button.classList.add("top-left-button");
+
+  button.addEventListener("click", () => {
+    createPopupWindow();
+  });
+
+  document.body.appendChild(button);
+}
+
 let debounceTimeout;
 const observer = new MutationObserver(() => {
   clearTimeout(debounceTimeout);
@@ -108,11 +189,88 @@ function injectStyles() {
     .toggle-nickname-button:hover {
       background-color: #45a049;
     }
-    
+
     /* Alignement amélioré pour les boutons */
     span[data-processed="true"] {
       display: inline-flex;
       align-items: center;
+    }
+
+    .top-left-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .top-left-button:hover {
+      background-color: #0056b3;
+    }
+
+    .nickname-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      max-width: 90%;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .popup-header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: move;
+    }
+
+    .popup-close-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup-content {
+      padding: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .popup-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .popup-content li {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .search-box {
+      width: calc(100% - 20px);
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
   `;
   document.head.appendChild(style);
@@ -121,6 +279,7 @@ function injectStyles() {
 function startScript() {
   nicknameMap = new Map();
   injectStyles();
+  addTopLeftButton();
   replaceNicknames();
   replaceNicknamesInSpans();
   observeChatTextDiv();
