@@ -1,7 +1,7 @@
 # HiddenNickname
 Si vous avez des proposition de mise à jour, n'hésitez pas à me contacté sur discord: actheglitch
 
-# Update du 11/012025
+# Update du 11/01/2025
 Amélioration graphique général de l'addon pour mieux s'accorder au site.
 
 # Description
