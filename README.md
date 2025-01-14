@@ -1,6 +1,8 @@
 # HiddenNickname
 
-Si vous avez des propositions de mise à jour, n'hésitez pas à me contacter sur Discord : actheglitch
+Si vous avez des propositions de mise à jour, ou besoin d'aide sur l'installation, n'hésitez pas à me contacter sur Discord : actheglitch
+
+Je ne reçois pas certaines notifications sur discord, n'hésitez pas a me relancer
 
 # Description
 
