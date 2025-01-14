@@ -70,4 +70,3 @@ Installation
     Apportez vos modifications.
     Soumettez une pull request avec une description claire de vos changements.
 
-Ce README devrait maintenant inclure toutes les informations nécessaires pour installer et utiliser votre extension sur Opera GX.
