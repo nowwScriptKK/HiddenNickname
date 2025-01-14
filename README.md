@@ -6,7 +6,7 @@ Je ne reçois pas certaines notifications sur discord, n'hésitez pas a me relan
 
 # Description
 
-Replace Nicknames est une extension Firefox qui remplace les surnoms des utilisateurs sur les sites chatiw.com et chatiw.fr par des mots aléatoires. Elle permet également de basculer entre le surnom original et le surnom généré aléatoirement grâce à un bouton dédié.
+Replace Nicknames est une extension Firefox/Opera GX qui remplace les surnoms des utilisateurs sur les sites chatiw.com et chatiw.fr par des mots aléatoires. Elle permet également de basculer entre le surnom original et le surnom généré aléatoirement grâce à un bouton dédié.
 
 # Mise à jour du 14/01/2025
 
