@@ -17,7 +17,7 @@ Prise en charge d'Opera GX
 [Regarder la vidéo](https://www.youtube.com/watch?v=JHyVR9FLPe8)
 
 
-(Si vous souhaitez une vidéo pour l'installation sur Opera GX dite le moi sur Discord, ou se référée a la section "Opera Addon")
+
 
 # Mise à jour du 12/01/2025
 
