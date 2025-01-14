@@ -12,7 +12,8 @@ Replace Nicknames est une extension Firefox/Opera GX qui remplace les surnoms de
 
 Prise en charge d'Opera GX
 
-[![Mon image](Capture.PNG)](https://www.youtube.com/watch?v=9gIWeiX8rrA)
+[Regarder la vidéo](https://github.com/votre-utilisateur/votre-repo/blob/main/opera-addon/Video_2025-01-14_133133.mp4)
+
 
 (Si vous souhaitez une vidéo pour l'installation sur Opera GX dite le moi sur Discord, ou se référée a la section "Opera Addon")
 
